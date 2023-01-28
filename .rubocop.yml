@@ -1,0 +1,24 @@
+# rubocop各種拡張機能をオンにする。
+require:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
+
+AllCops:
+  # 新しいrubocopの設定を全て適用する。
+  NewCops: enable
+
+  Exclude:
+    - "db/**/*"
+    - "bin/**/*"
+    - "vendor/**/*"
+    - "tmp/**/*"
+
+# Missing frozen string literal comment.をオフにする。
+# 参考サイト: https://qiita.com/universato/items/1dd8943df07f2445655e
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+# Missing top-level class/module documentation comment.をオフにする。
+Style/Documentation:
+  Enabled: false
